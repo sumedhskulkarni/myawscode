@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  tasks:
+   - name: create ec2
+     ec2:
+      region: ap-south-1
+      instance_type: t2.micro
+      image: ami-5b673c34
+      vpc_subnet_id: subnet-8b8422c7
+      assign_public_ip: no
+      group_id: sg-39f91753
+      key_name: AWSMyAccountAccess
