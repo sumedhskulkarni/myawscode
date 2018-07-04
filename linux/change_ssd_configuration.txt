@@ -1,0 +1,20 @@
+SSHD Service :
+--------------
+Configuration file: Change below parameter for keep your ssh session live:
+/etc/ssh/sshd_config
+
+ClientAliveInterval 0
+ClientAliveCountMax 7
+
+Redhat 6:
+----------
+service sshd restart
+service sshd status
+service sshd stop
+service sshd start
+
+Redhat 7:
+----------
+/bin/systemctl status sshd.service
+/bin/systemctl status sshd.service
+/bin/systemctl status sshd.service
