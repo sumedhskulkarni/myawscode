@@ -6,7 +6,7 @@ import boto.ec2
 import sys
 
 # specify AWS keys
-auth = {"aws_access_key_id": "AKIAI35YOWR7VYWSWE2Q", "aws_secret_access_key": "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"}
+auth = {"aws_access_key_id": "Value", "aws_secret_access_key": "Value"}
 
 def main():
     # read arguments from the command line and
