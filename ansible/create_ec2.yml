@@ -1,4 +1,7 @@
 ---
+#
+# This programs creates ec2 machine
+# ansible-playbook create_ec2.yml
 - hosts: localhost
   tasks:
    - name: create ec2
