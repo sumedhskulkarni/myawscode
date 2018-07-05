@@ -4,9 +4,10 @@
 
 import boto.ec2
 import sys
+import os
 
 # specify AWS keys
-auth = {"aws_access_key_id": "Value", "aws_secret_access_key": "Value"}
+auth = {"aws_access_key_id": os.getenv('AWS_ACCESS_KEY_ID') , "aws_secret_access_key": os.getenv('AWS_SECRET_ACCESS_KEY')}
 
 def main():
     # read arguments from the command line and
@@ -38,7 +39,7 @@ def startInstance():
 
     # change instance ID appropriately
     try:
-         ec2.start_instances(instance_ids="i-0b83534a517b7d037")
+         ec2.start_instances(instance_ids="i-0c2742d9f5dc5b7eb")
 
     except Exception, e2:
         error2 = "Error2: %s" % str(e2)
@@ -57,7 +58,7 @@ def stopInstance():
         sys.exit(0)
 
     try:
-         ec2.stop_instances(instance_ids="i-0b83534a517b7d037")
+         ec2.stop_instances(instance_ids="i-0c2742d9f5dc5b7eb")
 
     except Exception, e2:
         error2 = "Error2: %s" % str(e2)
